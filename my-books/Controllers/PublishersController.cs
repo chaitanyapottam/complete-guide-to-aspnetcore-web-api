@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using my_books.Data.Services;
 using my_books.Data.ViewModels;
+using System;
 
 namespace my_books.Controllers
 {
@@ -18,9 +19,16 @@ namespace my_books.Controllers
 
         [HttpPost("add-publisher")]
         public IActionResult AddPublisher([FromBody]PublisherVM publisher)
-        {
-            var _newPublisher = _publishersService.AddPublisher(publisher);
-            return Created(nameof(AddPublisher), _newPublisher);
+        {            
+            try
+            {
+                var _newPublisher = _publishersService.AddPublisher(publisher);
+                return Created(nameof(AddPublisher), _newPublisher);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("get-publisher-by-id/{Id}")]
@@ -47,8 +55,15 @@ namespace my_books.Controllers
         [HttpDelete("delete-publisher-by-id/{Id}")]
         public IActionResult DeletePublisherById(int Id)
         {
-            _publishersService.DeletePublisherById(Id);
-            return Ok();
+            try
+            {
+                _publishersService.DeletePublisherById(Id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

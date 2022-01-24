@@ -56,6 +56,10 @@ namespace my_books.Data.Services
                 _context.Publishers.Remove(_publisher);
                 _context.SaveChanges();
             }
+            else
+            {
+                throw new Exception($"Publisher with Id: {Id} doesn't exists");
+            }
         }
     }
 }
