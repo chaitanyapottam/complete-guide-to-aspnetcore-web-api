@@ -21,7 +21,7 @@ namespace my_books.Exceptions
 
         }
 
-        public PublisherNameException(string message, string publisherName)
+        public PublisherNameException(string message, string publisherName):this(message)
         {
             PublisherName = publisherName;
         }
