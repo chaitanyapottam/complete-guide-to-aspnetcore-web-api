@@ -58,3 +58,4 @@ C:\Users\chaitanya.pottam\source\repos\my-books\my-books\obj\Debug\net6.0\my-boo
 C:\Users\chaitanya.pottam\source\repos\my-books\my-books\obj\Debug\net6.0\ref\my-books.dll
 C:\Users\chaitanya.pottam\source\repos\my-books\my-books\obj\Debug\net6.0\my-books.pdb
 C:\Users\chaitanya.pottam\source\repos\my-books\my-books\obj\Debug\net6.0\my-books.genruntimeconfig.cache
+C:\Users\chaitanya.pottam\source\repos\my-books\my-books\bin\Debug\net6.0\Newtonsoft.Json.dll
