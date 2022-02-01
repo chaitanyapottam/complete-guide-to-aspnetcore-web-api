@@ -16,6 +16,24 @@ namespace my_books.Data.Services
             _context = context;
         }
 
+        public List<Publisher> GetAllPublishers(string sortBy) 
+        { 
+            var allPublishers = _context.Publishers.OrderBy(n => n.Name).ToList(); //Default sort by ASC
+
+            if (!string.IsNullOrEmpty(sortBy))
+            {
+                switch (sortBy)
+                {
+                    case "name_desc":
+                        allPublishers = allPublishers.OrderByDescending(n => n.Name).ToList();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            return allPublishers;
+        }
         public Publisher AddPublisher(PublisherVM publisher)
         {
             if(StringStartsWithNumber(publisher.Name)) throw new PublisherNameException("Name starts with number", publisher.Name);                 

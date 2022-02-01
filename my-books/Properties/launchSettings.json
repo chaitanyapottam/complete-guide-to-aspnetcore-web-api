@@ -26,6 +26,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "AllPublishers": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/publishers/get-all-publishers",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }
