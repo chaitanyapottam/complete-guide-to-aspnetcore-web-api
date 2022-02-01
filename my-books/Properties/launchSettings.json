@@ -34,6 +34,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "APIVersioning": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/test/get-test-data",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }
