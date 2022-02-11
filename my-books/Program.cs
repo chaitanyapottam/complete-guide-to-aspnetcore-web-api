@@ -19,9 +19,8 @@ namespace my_books
                 Log.Logger = new LoggerConfiguration().CreateLogger();
                 CreateHostBuilder(args).Build().Run();
             }
-            catch (Exception)
+            finally
             {
-
                 Log.CloseAndFlush();
             }
         }
